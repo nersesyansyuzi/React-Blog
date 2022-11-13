@@ -21,8 +21,10 @@ function CreateBlog() {
     return (
         <main>
             <div className="container">
+                <div className='top'>
             <img src="img/svg3.png" className='logo-create' alt="logo" onClick={()=>home("/")} />
                 <SlMenu className="menu-btn" onClick={() => dispatch({ type: "showMenu" })}></SlMenu>
+                </div>
                 <div className='create-blog-title'>
                     <h1>Create blog</h1>
                     <img src="img/svg3.png" alt="logo" className='create-blog-logo' />

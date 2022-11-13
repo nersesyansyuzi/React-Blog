@@ -11,7 +11,7 @@ import "./detail.style.scss"
 function BlogDetail() {
     const { blog: { detailBlog }, dispatch } = useContext(MyContext)
     const { id } = useParams()
-    const home=useNavigate()
+    const home = useNavigate()
     const collRef = collection(db, "blog")
 
 
@@ -27,13 +27,15 @@ function BlogDetail() {
     return (
         <>
             <main>
-                <img src="img/svg3.png" className='logo-detail' alt="logo" onClick={()=>home("/")} />
-            <SlMenu className="menu-btn" onClick={() => dispatch({ type: "showMenu" })}></SlMenu>
+                <div className='top'>
+                    <img src="img/svg3.png" className='logo-detail' alt="logo" onClick={() => home("/")} />
+                    <SlMenu className="menu-btn" onClick={() => dispatch({ type: "showMenu" })}></SlMenu>
+                </div>
                 <div className='blog'>
                     <div className='container'>
                         <div className='blog-detail-left'>
                             {detailBlog.map((elem,) => {
-                                const { category,Description, Title } = elem
+                                const { category, Description, Title } = elem
                                 return <div className="blog-detail-left-info" key={id}>
                                     <h1>{category}</h1>
                                     <h2>{Title}</h2>
@@ -43,9 +45,9 @@ function BlogDetail() {
                         </div>
 
                         <div className='blog-detail-right'>
-                               {detailBlog.map((elem)=>{
-                                return <img src={"img/"+elem.img} alt="" key={id} />
-                               })}
+                            {detailBlog.map((elem) => {
+                                return <img src={"img/" + elem.img} alt="" key={id} />
+                            })}
                         </div>
                     </div>
                 </div>

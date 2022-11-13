@@ -1,5 +1,4 @@
 .container {
-    padding-top: 70px;
     width: 90%;
     align-items: center;
     justify-content: space-around;
@@ -12,21 +11,16 @@
         flex-direction: column;
         gap: 15px;
     }
+
     
 
     .logo-create {
-        left: 0;
-        top: 20px;
         width: 50px;
         cursor: pointer;
-        position: absolute;
 
     }
 
     .menu-btn {
-        position: absolute;
-        right: 20px;
-        top: 20px;
         cursor: pointer;
         color: #FF3644;
         font-size: 40px;
