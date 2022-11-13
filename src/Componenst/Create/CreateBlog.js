@@ -2,29 +2,31 @@ import React, { useContext, useEffect } from 'react'
 import { SlMenu } from "react-icons/sl"
 import { MyContext } from '../Context/Context'
 import "./createBlog.style.scss"
-import {addDoc,collection} from "firebase/firestore"
+import { addDoc, collection } from "firebase/firestore"
 import { db } from '../firebase'
 import { useNavigate } from 'react-router-dom'
 
 function CreateBlog() {
-    const {  dispatch } = useContext(MyContext)
-    const collRef=collection(db,"blog")
-    const home=useNavigate()
-   
-  async function onSubmit(e){
-        e.preventDefault() 
-        if(!e.target.children[3].files[0]) return
-        const blog={...Object.fromEntries(...[new FormData(e.target)]),img:e.target.children[3].files[0].name}
-         await addDoc(collRef,{blog})
-    }
+    const { dispatch } = useContext(MyContext)
+    const collRef = collection(db, "blog")
+    const home = useNavigate()
 
+    async function onSubmit(e) {
+        e.preventDefault()
+        if (!e.target.children[3].files[0]) return
+        const blog = { ...Object.fromEntries(...[new FormData(e.target)]), img: e.target.children[3].files[0].name }
+        await addDoc(collRef, { blog })
+    }
+     useEffect(()=>{
+        dispatch({type:"deletDetailBlog"})
+     },[])
     return (
         <main>
-            <div className="container">
-                <div className='top'>
-            <img src="img/svg3.png" className='logo-create' alt="logo" onClick={()=>home("/")} />
+            <div className='top'>
+                <img src="img/svg3.png" className='logo-create' alt="logo" onClick={() => home("/")} />
                 <SlMenu className="menu-btn" onClick={() => dispatch({ type: "showMenu" })}></SlMenu>
-                </div>
+            </div>
+            <div className="container">
                 <div className='create-blog-title'>
                     <h1>Create blog</h1>
                     <img src="img/svg3.png" alt="logo" className='create-blog-logo' />
@@ -42,7 +44,7 @@ function CreateBlog() {
                                 </select>
                             </label>
                             <textarea placeholder="Description" name='Description' ></textarea>
-                            <input type="file"  className="custom-file-input"/>
+                            <input type="file" className="custom-file-input" />
                             <input type="submit" value="create" onSubmit={onSubmit} />
                         </form>
                     </div>

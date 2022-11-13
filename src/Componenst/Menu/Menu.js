@@ -15,7 +15,6 @@ function Menu() {
     }
 
     useEffect(()=>{
-        dispatch({type:"deletDetailBlog"})
       showMenu && (document.body.style.overflow="hidden")
     },[])
 

@@ -1,177 +1,191 @@
-.container {
-    width: 90%;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0 auto;
-    height: 100%;
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    @media only screen and (max-width:920px) {
-        flex-direction: column;
-        gap: 15px;
-    }
+main {
+    .top {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        padding-top: 20px;
+        align-items: center;
+        justify-content: space-between;
 
+        .logo-create {
+            width: 50px;
+            cursor: pointer;
+
+        }
+        .menu-btn {
+            cursor: pointer;
+            color: #FF3644;
+            font-size: 40px;
+            z-index: 5;
+            transition: transform .3s;
     
-
-    .logo-create {
-        width: 50px;
-        cursor: pointer;
-
-    }
-
-    .menu-btn {
-        cursor: pointer;
-        color: #FF3644;
-        font-size: 40px;
-        z-index: 5;
-        transition: transform .3s;
-        &:hover{
-            transform: scale(1.1);
-        }
-    }
-
-    .create-blog-title {
-        h1 {
-            letter-spacing: 3px;
-            font-size: 50px;
-            animation: animTitle 900ms ease;
-        }
-
-        .create-blog-logo {
-            margin-top: 20px;
-            max-width: 575px;
-            height: 550px;
-            animation: animLogo 900ms ease;
-            @media only screen and (max-width:920px) {
-              height: 200px;
+            &:hover {
+                transform: scale(1.1);
             }
         }
+    
     }
-
-    .section {
-
-        animation: animForm 900ms ease;
-
-        .section-info {
-            width: 70%;
-
-            form {
-                display: flex;
-                gap: 20px;
-                flex-direction: column;
-
-                input[type="text"],
-                textarea {
-                    width: 400px;
-                    height: 35px;
-                    padding-left: 10px;
-                    font-size: 17px;
-                    border: 2px solid black;
-                    border-radius: 10px;
-
-                    &:focus {
+    .container {
+        width: 90%;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0 auto;
+        height: 100%;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+    
+        @media only screen and (max-width:920px) {
+            flex-direction: column;
+            gap: 15px;
+        }
+    
+        .create-blog-title {
+            h1 {
+                letter-spacing: 3px;
+                font-size: 50px;
+                animation: animTitle 900ms ease;
+            }
+    
+            .create-blog-logo {
+                margin-top: 20px;
+                max-width: 575px;
+                height: 550px;
+                animation: animLogo 900ms ease;
+    
+                @media only screen and (max-width:920px) {
+                    height: 200px;
+                }
+            }
+        }
+    
+        .section {
+    
+            animation: animForm 900ms ease;
+    
+            .section-info {
+                width: 70%;
+    
+                form {
+                    display: flex;
+                    gap: 20px;
+                    flex-direction: column;
+    
+                    input[type="text"],
+                    textarea {
+                        width: 400px;
+                        height: 35px;
                         padding-left: 10px;
-                    }
-                }
-
-                textarea {
-                    resize: none;
-                    height: 70px;
-                    padding-top: 10px;
-                }
-
-                input[type="submit"] {
-                    width: 400px;
-                    height: 35px;
-                    cursor: pointer;
-                    font-size: 20px;
-                    letter-spacing: 2px;
-                    border: 2px solid red;
-                    background-color: white;
-                    border-radius: 10px;
-                    transition: background-color 600ms ease, color 600ms ease;
-
-                    &:hover {
-                        background-color: red;
-                        color: white;
-                    }
-                }
-
-                .custom-select {
-                    position: relative;
-                    max-width: 400px;
-                    min-width: 180px;
-                    border: 1px solid #FF3644;
-                    background-color: #FF3644;
-                    border-radius: 10px;
-
-                    &::after {
-                        position: absolute;
-                        right: 0;
-                        top: 0;
-                        width: 50px;
-                        height: 100%;
-                        line-height: 38px;
-                        content: '\2228';
-                        text-align: center;
-                        color: black;
-                        font-size: 24px;
-                        border-left: 1px solid black;
-                    }
-
-                    select {
-                        border: none;
-                        outline: none;
-                        background: transparent;
-                        appearance: none;
-                        border-radius: 10px;
-                        width: 100%;
-                        padding: 12px 55px 15px 15px;
                         font-size: 17px;
-                        color: black;
-
+                        border: 2px solid black;
+                        border-radius: 10px;
+    
+                        &:focus {
+                            padding-left: 10px;
+                        }
                     }
+    
+                    textarea {
+                        resize: none;
+                        height: 70px;
+                        padding-top: 10px;
+                    }
+    
+                    input[type="submit"] {
+                        width: 400px;
+                        height: 35px;
+                        cursor: pointer;
+                        font-size: 20px;
+                        letter-spacing: 2px;
+                        border: 2px solid red;
+                        background-color: white;
+                        border-radius: 10px;
+                        transition: background-color 600ms ease, color 600ms ease;
+    
+                        &:hover {
+                            background-color: red;
+                            color: white;
+                        }
+                    }
+    
+                    .custom-select {
+                        position: relative;
+                        max-width: 400px;
+                        min-width: 180px;
+                        border: 1px solid #FF3644;
+                        background-color: #FF3644;
+                        border-radius: 10px;
+    
+                        &::after {
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            width: 50px;
+                            height: 100%;
+                            line-height: 38px;
+                            content: '\2228';
+                            text-align: center;
+                            color: black;
+                            font-size: 24px;
+                            border-left: 1px solid black;
+                        }
+    
+                        select {
+                            border: none;
+                            outline: none;
+                            background: transparent;
+                            appearance: none;
+                            border-radius: 10px;
+                            width: 100%;
+                            padding: 12px 55px 15px 15px;
+                            font-size: 17px;
+                            color: black;
+    
+                        }
+                    }
+    
+                    .custom-file-input {
+                        color: transparent;
+                    }
+    
+                    .custom-file-input::-webkit-file-upload-button {
+                        visibility: hidden;
+                    }
+    
+                    .custom-file-input::before {
+                        content: 'Select some files';
+                        color: black;
+                        display: inline-block;
+                        background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+                        border: 1px solid #999;
+                        border-radius: 3px;
+                        padding: 5px 8px;
+                        cursor: pointer;
+                        text-shadow: 1px 1px #fff;
+                        font-weight: 700;
+                        font-size: 10pt;
+                    }
+    
+                    .custom-file-input:hover::before {
+                        border-color: black;
+                    }
+    
+                    .custom-file-input:active {
+                        outline: 0;
+                    }
+    
+                    .custom-file-input:active::before {
+                        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+                    }
+    
                 }
-
-                .custom-file-input {
-                    color: transparent;
-                }
-
-                .custom-file-input::-webkit-file-upload-button {
-                    visibility: hidden;
-                }
-
-                .custom-file-input::before {
-                    content: 'Select some files';
-                    color: black;
-                    display: inline-block;
-                    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
-                    border: 1px solid #999;
-                    border-radius: 3px;
-                    padding: 5px 8px;
-                    cursor: pointer;
-                    text-shadow: 1px 1px #fff;
-                    font-weight: 700;
-                    font-size: 10pt;
-                }
-
-                .custom-file-input:hover::before {
-                    border-color: black;
-                }
-
-                .custom-file-input:active {
-                    outline: 0;
-                }
-
-                .custom-file-input:active::before {
-                    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
-                }
-
             }
         }
     }
 }
+
+
+
 
 
 @keyframes animLogo {
