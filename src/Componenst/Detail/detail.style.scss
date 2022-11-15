@@ -30,18 +30,18 @@ main{
     }
     
     .blog {
+        min-height: 100%;
+        @media only screen and (max-width:920px) {
+           min-height: 100vh;
+        }
         .container {
             padding-top: 20px;
             width: 90%;
-            align-items: center;
-            justify-content: space-between;
+            height: 100%;
             margin: 0 auto;
-            position: relative;
-            display: flex;
-    
             @media only screen and (max-width:1040px) {
-                flex-wrap: wrap;
                 gap: 50px;
+                flex-wrap: wrap;
                 margin-top: 50px;
             }
     

@@ -30,14 +30,13 @@ main {
         align-items: center;
         justify-content: space-around;
         margin: 0 auto;
-        height: 100%;
         position: relative;
         display: flex;
-        overflow: hidden;
-    
+
         @media only screen and (max-width:920px) {
-            flex-direction: column;
             gap: 15px;
+            height: 80vh;
+            flex-wrap: wrap;
         }
     
         .create-blog-title {
@@ -54,18 +53,18 @@ main {
                 animation: animLogo 900ms ease;
     
                 @media only screen and (max-width:920px) {
-                    height: 200px;
+                    display: none;
                 }
             }
         }
     
         .section {
-    
             animation: animForm 900ms ease;
+            @media only screen and (max-width:920px) {
+                width: 100%;
+            }
     
-            .section-info {
-                width: 70%;
-    
+            .section-info {    
                 form {
                     display: flex;
                     gap: 20px;
@@ -73,7 +72,7 @@ main {
     
                     input[type="text"],
                     textarea {
-                        width: 400px;
+                        // width: 400px;
                         height: 35px;
                         padding-left: 10px;
                         font-size: 17px;
@@ -106,12 +105,15 @@ main {
                             background-color: red;
                             color: white;
                         }
+                        @media only screen and (max-width:920px) {
+                            width: 100%;
+                        }
                     }
     
                     .custom-select {
                         position: relative;
-                        max-width: 400px;
-                        min-width: 180px;
+                        // max-width: 400px;
+                        // min-width: 180px;
                         border: 1px solid #FF3644;
                         background-color: #FF3644;
                         border-radius: 10px;

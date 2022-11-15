@@ -11,7 +11,8 @@ function Context({children}) {
       posts:[],
       detailBlog:[],
       showMenu:false,
-      sliderId:0
+      sliderId:0,
+      load:false,
     })
 
   return (

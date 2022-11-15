@@ -4,7 +4,7 @@ export function reducer(state,action){
     case "showMenu":
         return {...state,showMenu:!state.showMenu}
     case "addBlog":
-        return {...state,posts:payload}
+        return {...state,posts:payload,load:true}
     case "detailBlog":
         return {...state,detailBlog:[payload]}    
     case "deletDetailBlog":

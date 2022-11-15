@@ -1,7 +1,5 @@
-
 import './App.css';
 import Home from "./Componenst/Home/Home"
-import Menu from "./Componenst/Menu/Menu"
 import CreateBlog from "./Componenst/Create/CreateBlog"
 import { Route, Routes } from "react-router-dom"
 import Layout from './Componenst/Layout';
