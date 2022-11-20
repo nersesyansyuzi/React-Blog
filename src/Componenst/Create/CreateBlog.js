@@ -16,6 +16,7 @@ function CreateBlog() {
         if (!e.target.children[3].files[0]) return
         const blog = { ...Object.fromEntries(...[new FormData(e.target)]), img: e.target.children[3].files[0].name }
         await addDoc(collRef, { blog })
+        home("/")
     }
      useEffect(()=>{
         dispatch({type:"deletDetailBlog"})
