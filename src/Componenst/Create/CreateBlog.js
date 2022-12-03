@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from 'react'
 import { SlMenu } from "react-icons/sl"
 import { MyContext } from '../Context/Context'
-import "./createBlog.style.scss"
 import { addDoc, collection } from "firebase/firestore"
 import { db } from '../firebase'
 import { useNavigate } from 'react-router-dom'
+import "./createBlog.style.scss"
 
 function CreateBlog() {
     const { dispatch } = useContext(MyContext)
@@ -42,6 +42,8 @@ function CreateBlog() {
                                     <option value="Sport">Sport</option>
                                     <option value="Politics">Politics</option>
                                     <option value="Business">Business</option>
+                                    <option value="IT">IT</option>
+                                    <option value="Game">Game</option>
                                 </select>
                             </label>
                             <textarea placeholder="Description" name='Description' ></textarea>
