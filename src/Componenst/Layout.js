@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { Outlet } from 'react-router-dom'
 import { MyContext } from './Context/Context'
-
 import Menu from './Menu/Menu'
 
 function Layout() {

@@ -27,7 +27,6 @@ function Menu() {
               <ul>
                 <Link to={"/"} onClick={closeMenu}><li>Home</li></Link>
                 <Link to={"/create"} onClick={closeMenu}><li>Create blog</li></Link>
-                <li>Небольшой проект, в котором можете поделиться вашими интересами или мнениями</li>
               </ul>
               <div className="icons">
                 <a href="https://github.com/nersesyansyuzi" target="blank" ><AiFillGithub /></a>

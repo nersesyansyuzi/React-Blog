@@ -42,10 +42,8 @@ function Blog() {
                                 const { category, id, Description, Title } = elem
 
                                 let position = "next"
-                                if (sliderId === index)
-                                    position = "active"
-                                if (index === sliderId - 1 || (sliderId === 0 && index === posts.length - 1))
-                                    position = "last"
+                                if (sliderId == index) position = "active"
+                                if (index == sliderId - 1 || (sliderId == 0 && index == posts.length - 1)) position = "last"
 
                                 return <div className={"blog-left-info" + " " + position} key={id}>
                                     <h1>{category}</h1>
