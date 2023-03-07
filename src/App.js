@@ -10,7 +10,7 @@ function App() {
     <>
       <Routes>
         <Route element={<Layout/>}>
-          <Route path="/" element={<Home />} />
+          <Route path="React-Blog" element={<Home />} />
           <Route path="create" element={<CreateBlog />} />
           <Route path=":id" element={<BlogDetail/>} />
         </Route>
